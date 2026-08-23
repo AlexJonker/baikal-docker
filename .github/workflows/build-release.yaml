@@ -38,4 +38,6 @@ jobs:
       tags: |
         ghcr.io/${{ github.repository_owner }}/baikal:${{ needs.parse_release_tag.outputs.baikal-version }}-nginx
         ghcr.io/${{ github.repository_owner }}/baikal:${{ needs.parse_release_tag.outputs.baikal-version }}
+        ghcr.io/${{ github.repository_owner }}/baikal:nginx
+        ghcr.io/${{ github.repository_owner }}/baikal:latest
     secrets: inherit
