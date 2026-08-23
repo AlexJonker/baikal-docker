@@ -11,12 +11,12 @@ FROM nginx:1
 
 # Install dependencies: PHP & SQLite3
 RUN curl -o /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg &&\
-  apt update                  &&\
-  apt install -y lsb-release  &&\
+  apt-get update                  &&\
+  apt-get install -y lsb-release  &&\
   echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list &&\
-  apt remove -y lsb-release   &&\
-  apt update                  &&\
-  apt install -y            \
+  apt-get remove -y lsb-release   &&\
+  apt-get update                  &&\
+  apt-get install -y            \
   php8.5-curl               \
   php8.5-fpm                \
   php8.5-mbstring           \
